@@ -6,7 +6,12 @@
 
 **Teach AI agents to write well, not just avoid sounding like AI.**
 
-[Quick start](#quick-start) · [What's inside](#whats-inside) · [How it's different](#how-its-different) · [Voice calibration](#voice-calibration) · [License](#license)
+![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![Install: one file](https://img.shields.io/badge/install-1%20file-brightgreen.svg)
+![Works with: Claude Code, Cursor, Kiro](https://img.shields.io/badge/works%20with-Claude%20Code%20%C2%B7%20Cursor%20%C2%B7%20Kiro-8A2BE2.svg)
+![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+
+[Quick start](#quick-start) · [See it work](#see-it-work) · [What's inside](#whats-inside) · [How it's different](#how-its-different) · [Voice calibration](#voice-calibration) · [License](#license)
 
 </div>
 
@@ -17,6 +22,20 @@ One file that teaches your AI agent how sentences work. Word choice, rhythm, los
 I built this because I kept pasting the same editing instructions into every session. Fix the hedge words. Cut the throat-clearing. Make it concrete. One file that carries those rules everywhere was overdue.
 
 Models are trained to produce text that's pleasant to skim and hard to disagree with. RLHF rewards smooth, safe, hedged prose. This skill produces the opposite: writing that takes a position, names a specific failure, and rewards readers who pay attention.
+
+## See it work
+
+Same idea, run through edit mode. The input passes most AI detectors. It still reads like nobody wrote it.
+
+**Before** (the AI first draft):
+
+> In today's rapidly evolving development landscape, leveraging AI coding assistants has become increasingly crucial. These powerful tools can significantly enhance developer productivity and streamline workflows, empowering teams to focus on what truly matters.
+
+**After** (edit mode output):
+
+> AI coding assistants handle the boring parts: boilerplate, test scaffolds, the third CRUD endpoint that looks like the first two. They will not decide what to build for you. That part is still yours.
+
+The skill flagged six tells in the first version (`in today's`, `landscape`, `leveraging`, `crucial`, `enhance`, `empowering`), then rewrote for a concrete claim instead of swapping synonyms. <!-- vrm-ignore: names AI-vocab tells on purpose -->
 
 ## Quick start
 
@@ -62,7 +81,7 @@ Classic copywriting applied to technical writing:
 
 | Category | Examples |
 |----------|----------|
-| **Vocabulary** (3 tiers) | delve, tapestry, leverage, robust, seamless, harness, foster, resonate |
+| **Vocabulary** (3 tiers) | delve, tapestry, leverage, robust, seamless, harness, foster, resonate <!-- vrm-ignore: exhibit of flagged words --> |
 | **Structure** | Significance inflation, empty -ing phrases, "Despite" formula, copula avoidance |
 | **Formatting** | Em dash overuse, bold-as-study-guide, inline-header lists |
 | **Content** | Vague attribution, chatbot artifacts, "Let's explore," rhetorical questions |
