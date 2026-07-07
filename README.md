@@ -1,128 +1,134 @@
-# Writing Craft Skill
+<h1 align="center">✍️ writing-craft-skill</h1>
 
-A reusable skill for AI coding agents (Claude Code, Kiro CLI, Cursor, VS Code Copilot) that teaches the agent to **write well**, not just avoid sounding like AI.
+<div align="center">
 
-## What makes this different
+**Teach AI agents to write well, not just avoid sounding like AI.**
+
+[Quick start](#quick-start) · [What's inside](#whats-inside) · [How it's different](#how-its-different) · [Voice calibration](#voice-calibration) · [License](#license)
+
+</div>
+
+---
 
 The humanizer skills strip AI patterns. This skill adds craft.
 
-| Humanizer skills | This skill |
-|-----------------|------------|
-| Remove AI vocabulary | Teach short words, concrete nouns, active verbs |
-| Detect structural patterns | Teach sentence rhythm, the slippery slide, loss framing |
-| Generic voice profiles (casual/professional) | Match a specific author's voice from a sample |
-| Fix existing text | Write well from scratch AND fix existing text |
-| Pattern matching (defensive) | Writing craft (generative) + pattern matching |
+Short words. Concrete images. Sentence rhythm. The slippery slide. Loss framing. The editing discipline that turns a first draft into writing that holds attention.
 
-## Principles inside
+Models are trained to produce text that's pleasant to skim and hard to disagree with. RLHF rewards smooth, safe, hedged prose. This skill teaches the opposite: writing specific enough to disagree with, concrete enough to be wrong about something, sharp enough that a reader who skims will miss the point.
 
-Classic copywriting craft applied to technical writing:
+## Quick start
 
-- **Ogilvy**: Short words, short sentences, short paragraphs. Write like you talk.
-- **Sugarman**: The slippery slide. Every sentence's only job is to make you read the next one.
-- **Zinsser**: Cut every word that doesn't do useful work. Kill qualifiers, filler, throat-clearing.
-- **Hemingway**: Active verbs. Concrete details. Be positive, not negative.
-- **Deutsch**: The editing IS the craft. Show, don't explain. Copy works like music.
-
-Plus a 24-category AI anti-pattern checklist (vocabulary, structural, formatting, content, rhythm).
-
-## Installation
-
-### Claude Code / Kiro CLI
-
-Copy `SKILL.md` to your project or user skills directory:
+Copy one file. That's the install.
 
 ```bash
-# Project-level (shared via git)
+# Claude Code / Kiro CLI (project-level, shared via git)
+mkdir -p .kiro/skills/writing-craft
 cp SKILL.md .kiro/skills/writing-craft/SKILL.md
+```
 
-# Or user-level
+```bash
+# User-level (applies to all your projects)
+mkdir -p ~/.kiro/skills/writing-craft
 cp SKILL.md ~/.kiro/skills/writing-craft/SKILL.md
 ```
 
-### Cursor / VS Code Copilot
+Works with any agent that reads markdown instructions: Claude Code, Kiro CLI, Cursor, VS Code Copilot, OpenHands.
 
-Add to your project's `.cursor/rules/` or equivalent agent instructions directory.
+## What's inside
 
-### Any agent that reads markdown instructions
+The skill has two modes:
 
-Copy the content of `SKILL.md` into your system prompt or agent configuration.
+**Write mode** — draft content from scratch using craft principles. Opens concrete, grounds every claim, closes with action.
 
-## Usage
+**Edit mode** — review existing text, flag problems, rewrite flagged passages. Triggered by "edit this," "review this," or `=C=` (grammar/clarity only).
 
-The skill activates when you ask the agent to write, edit, review, or improve text:
+### Craft principles (the generative half)
 
-```
-write a blog post about integration testing on AWS
-```
+Classic copywriting applied to technical writing:
 
-```
-edit this draft — make it sound less like AI
-```
+- 🔤 **Word choice** (Ogilvy/Halbert): "use" not "utilize," concrete nouns, active verbs, cut adverbs
+- 📐 **Sentence craft** (Sugarman): the slippery slide, short first sentences, one idea per sentence
+- 📄 **Paragraph craft** (Zinsser): lead with the point, one thought per paragraph, kill throat-clearing
+- 🎵 **Rhythm** (Deutsch): copy works like music, vary length, reprise themes
+- 🎯 **Loss framing**: frame what the reader loses by not acting, not what they gain
+- 🔍 **Knowledge advantage**: specific frustration beats general benefit
+- ✂️ **The editing principle**: "I'm not a great writer, but I'm a hell of an editor" (Ogilvy)
 
-```
-review this LinkedIn post for AI patterns
-```
+### Anti-pattern checklist (the defensive half)
 
-```
-=C=
-[paste text here]
-```
+24 categories of AI writing tells, organized by type:
 
-The `=C=` trigger means: grammar, clarity, readability rewrite only. Output corrected text. No commentary.
+| Category | Examples |
+|----------|----------|
+| **Vocabulary** (3 tiers) | delve, tapestry, leverage, robust, seamless, harness, foster, resonate |
+| **Structure** | Significance inflation, empty -ing phrases, "Despite" formula, copula avoidance |
+| **Formatting** | Em dash overuse, bold-as-study-guide, inline-header lists |
+| **Content** | Vague attribution, chatbot artifacts, "Let's explore," rhetorical questions |
+| **Rhythm** | Sentence uniformity, paragraph uniformity, missing first-person, over-polishing |
 
-## What it catches
+## How it's different
 
-**Vocabulary**: 80+ flagged words across three tiers (always-flag, cluster-flag, density-flag)
+|  | Generic humanizers | This skill |
+|--|-------------------|------------|
+| **Goal** | "Don't sound like AI" | "Sound like a practiced author" |
+| **Method** | Pattern matching (defensive) | Craft principles (generative) + pattern matching |
+| **Voice** | Template profiles (casual/professional/blunt) | Calibrated to YOUR writing from a sample |
+| **Writing** | Fixes existing text only | Writes well from scratch AND fixes existing text |
+| **Depth** | Word swaps and structural flags | Why AI writing fails (RLHF mode collapse) and what to do instead |
 
-**Structure**: Significance inflation, empty participle phrases, negative parallelism overuse, the "Despite" formula, copula avoidance, synonym cycling
+The competitors (blader/humanizer at 28k stars, conorbronsdon/avoid-ai-writing) are excellent at removing patterns. They don't teach craft. They produce clean text that reads like... clean text. Not like a person with experience and opinions wrote it.
 
-**Formatting**: Em dash overuse, excessive boldface, inline-header lists, title case headings
+## Voice calibration
 
-**Content**: Vague attributions, chatbot artifacts, conclusion summaries, "Let's" constructions, rhetorical question openers
-
-**Rhythm**: Sentence length uniformity, paragraph uniformity, missing first-person perspective
-
-## What it teaches (that others don't)
-
-- Lead with the point, not the setup
-- One idea per sentence, one thought per paragraph
-- Loss framing over gain framing
-- The knowledge advantage: know the subject deeper than anyone else writing about it
-- The Ogilvy test: read it aloud, if you wouldn't say it that way, rewrite it
-- Rhythm variation: mix 5-word punches with 22-word flows
-- Experience markers: include observations from real work, not abstract claims
-
-## Customization
-
-### Voice matching
-
-Provide a writing sample and the skill will match your specific patterns:
+The skill doesn't impose one voice. Provide a writing sample and it matches your patterns:
 
 ```
-Match my voice — here's a recent post: [paste sample]
+Match my voice — here's a recent post: [paste 3-5 paragraphs]
 ```
 
-The skill analyzes sentence-length, contraction rate, paragraph openings, and register, then matches those instead of defaulting to generic "professional."
+It analyzes: sentence length, contraction rate, opening patterns, register, recurring constructions. Then enforces craft principles within YOUR voice, not a generic template.
 
-### Domain-specific extensions
+See [`references/voice-calibration-guide.md`](references/voice-calibration-guide.md) for a full walkthrough on building a permanent voice profile.
 
-Add a `references/` directory with domain-specific rules:
+## When NOT to use this
+
+| Situation | Better choice |
+|-----------|--------------|
+| You need to bypass AI detectors (academic) | This is a craft tool, not a cheating tool |
+| You want a grammar-only check | Use a grammar tool; this rewrites for craft |
+| Your text is code documentation | Code docs need clarity, not voice; use plain style guides |
+| You want longer, more detailed output | This skill cuts. It makes things shorter, not longer. |
+
+## Extending
+
+Add domain-specific rules in `references/`:
 
 ```
 writing-craft/
 ├── SKILL.md
 └── references/
-    └── aws-service-names.md    # AWS naming conventions
-    └── your-domain-terms.md    # Your industry terminology
+    ├── voice-calibration-guide.md
+    ├── your-industry-terms.md      # Terminology conventions
+    └── your-style-overrides.md     # Company/publication style rules
 ```
+
+The skill loads reference files when relevant context is detected.
+
+## Contributing
+
+Ideas welcome:
+
+- Additional anti-patterns you've seen in AI output (with examples)
+- Craft principles from other copywriting traditions
+- Domain-specific reference files (legal writing, medical, finance)
+- Translations (the skill matches input language, but the checklist is English-first)
 
 ## License
 
-MIT
+MIT — use it, fork it, sell courses around it, put it in your product.
 
 ## Credits
 
-Craft principles distilled from: David Ogilvy (Ogilvy on Advertising), Joseph Sugarman (The Adweek Copywriting Handbook), William Zinsser (On Writing Well), Gary Halbert (The Boron Letters), Ernest Hemingway, David Deutsch.
+Craft principles from: David Ogilvy, Joseph Sugarman, William Zinsser, Gary Halbert, Ernest Hemingway, David Deutsch.
 
-AI anti-pattern research informed by: Wikipedia WikiProject AI Cleanup, Liang et al. (Stanford, 2023), and community projects including [conorbronsdon/avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) and [blader/humanizer](https://github.com/blader/humanizer).
+AI anti-pattern research informed by: Wikipedia WikiProject AI Cleanup, Liang et al. (Stanford, 2023), and community work including [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) and [humanizer](https://github.com/blader/humanizer).
