@@ -1,0 +1,25 @@
+{
+  "name": "vidanov-skills",
+  "description": "Writing craft skill combining classic copywriting principles with AI anti-pattern detection",
+  "version": "1.0.0",
+  "owner": {
+    "name": "Alexey Vidanov",
+    "email": "alexey@vidanov.com"
+  },
+  "plugins": [
+    {
+      "name": "writing-craft",
+      "source": "./plugins/writing-craft",
+      "description": "Teach AI agents to write well using Ogilvy, Sugarman, Zinsser craft principles plus 24-category AI anti-pattern detection",
+      "version": "1.0.0",
+      "author": {
+        "name": "Alexey Vidanov"
+      },
+      "homepage": "https://github.com/vidanov/writing-craft-skill",
+      "repository": "https://github.com/vidanov/writing-craft-skill",
+      "license": "MIT",
+      "keywords": ["writing", "editing", "copywriting", "ai-detection", "craft", "humanizer"],
+      "category": "productivity"
+    }
+  ]
+}

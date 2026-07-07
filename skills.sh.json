@@ -1,0 +1,10 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Writing Craft",
+      "description": "Write and edit technical content using classic copywriting craft principles plus 24-category AI anti-pattern detection",
+      "skills": ["writing-craft"]
+    }
+  ]
+}
