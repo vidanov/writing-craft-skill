@@ -9,7 +9,7 @@ description: >-
   or "improve this draft."
 ---
 
-# Writing Craft — Write Well, Not Just "Not Like AI"
+# Writing craft: write well, not just "not like AI"
 
 ## Why this skill exists
 
@@ -131,15 +131,15 @@ When reviewing text:
 
 ### Vocabulary red flags
 
-**Tier 1 — always flag (5-20x more common in AI text than human text):**
+**Tier 1 (always flag, 5-20x more common in AI text than human text):**
 
 delve, tapestry (figurative), testament, underscore (figurative), vibrant, intricate/intricacies, interplay, meticulous/meticulously, pivotal, garner, bolstered, fostering, showcasing, landscape (figurative), enduring, realm, paradigm, embark, beacon, robust, comprehensive, cutting-edge, seamless/seamlessly, utilize, nestled, leverage (verb, when "use" works)
 
-**Tier 2 — flag when 2+ appear in same paragraph:**
+**Tier 2 (flag when 2+ appear in same paragraph):**
 
 harness, navigate/navigating, foster, elevate, unleash, streamline, empower, bolster, spearhead, resonate, revolutionize, facilitate, underpin, nuanced, crucial, multifaceted, ecosystem (metaphor), myriad, plethora, encompass, catalyze, reimagine, cultivate, illuminate, cornerstone, paramount, poised, burgeoning, nascent, overarching
 
-**Tier 3 — flag only at high density:**
+**Tier 3 (flag only at high density):**
 
 significant/significantly, innovative/innovation, effective/effectively, dynamic, scalable, compelling, unprecedented, exceptional, remarkable, sophisticated, instrumental, world-class/state-of-the-art
 
@@ -218,7 +218,7 @@ significant/significantly, innovative/innovation, effective/effectively, dynamic
 
 This skill does not impose a single voice. It enforces craft principles that work across voices.
 
-If the user provides a voice sample ("match my style — here's a post"), analyze its:
+If the user provides a voice sample ("match my style, here's a post"), analyze its:
 - Sentence-length pattern
 - Contraction rate
 - Paragraph openings
@@ -239,8 +239,8 @@ Return the drafted content. Follow all craft principles. Run the anti-pattern ch
 
 Return in three sections:
 
-**1. Issues found** — bulleted list, quote the phrase, name the pattern.
+**1. Issues found**: bulleted list, quote the phrase, name the pattern.
 
-**2. Rewritten version** — full rewrite with all issues fixed.
+**2. Rewritten version**: full rewrite with all issues fixed.
 
-**3. What changed** — brief summary of major edits and why.
+**3. What changed**: brief summary of major edits and why.

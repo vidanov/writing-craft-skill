@@ -12,11 +12,13 @@
 
 ---
 
-The humanizer skills strip AI patterns. This skill adds craft: short words, concrete images, the editing discipline that turns a first draft into writing worth reading.
+The humanizer skills strip AI patterns. This skill adds craft.
 
-I built this because I kept publishing articles that passed every AI detector but still read like a helpful assistant wrote them. The fix was not more pattern removal. It was learning how Ogilvy, Sugarman, and Zinsser thought about sentences, then encoding those principles into a single file an AI agent can follow.
+Short words. Concrete images. Sentence rhythm. Loss framing. The editing discipline that turns a first draft into writing that holds attention.
 
-Models are trained to produce text that's pleasant to skim and hard to disagree with. RLHF rewards smooth, safe, hedged prose. This skill produces the opposite: writing that takes a position, names a specific failure, and loses readers who skim because it rewards readers who don't.
+Models are trained to produce text that's pleasant to skim and hard to disagree with. RLHF rewards smooth, safe, hedged prose. This skill teaches the opposite: writing specific enough to disagree with, concrete enough to be wrong about something, sharp enough that a reader who skims will miss the point.
+
+I built this because the humanizer I was using cleaned my drafts until they read like every other cleaned draft. Nothing wrong, nothing alive.
 
 ## Quick start
 
@@ -38,11 +40,11 @@ Works with any agent that reads markdown instructions: Claude Code, Kiro CLI, Cu
 
 ## What's inside
 
-The skill has two modes:
+The skill has two modes.
 
-**Write mode**: draft content from scratch using craft principles. Opens concrete, grounds every claim, closes with action.
+**Write mode** drafts content from scratch using craft principles. Opens concrete, grounds every claim, closes with action.
 
-**Edit mode**: review existing text, flag problems, rewrite flagged passages. Triggered by "edit this," "review this," or `=C=` (grammar/clarity only).
+**Edit mode** reviews existing text, flags problems, rewrites flagged passages. Triggered by "edit this," "review this," or `=C=` (grammar and clarity only).
 
 ### Craft principles (the generative half)
 
@@ -53,7 +55,7 @@ Classic copywriting applied to technical writing:
 - 📄 **Paragraph craft** (Zinsser): lead with the point, one thought per paragraph, kill throat-clearing
 - 🎵 **Rhythm** (Deutsch): copy works like music, vary length, reprise themes
 - 🎯 **Loss framing**: frame what the reader loses by not acting, not what they gain
-- 🔍 **Knowledge advantage**: know the subject deeper than anyone else writing about it
+- 🔍 **Knowledge advantage**: specific frustration beats general benefit
 - ✂️ **The editing principle**: "I'm not a great writer, but I'm a hell of an editor" (Ogilvy)
 
 ### Anti-pattern checklist (the defensive half)
@@ -73,22 +75,22 @@ Classic copywriting applied to technical writing:
 |  | Generic humanizers | This skill |
 |--|-------------------|------------|
 | **Goal** | "Don't sound like AI" | "Sound like a practiced author" |
-| **Method** | Pattern matching (defensive) | Craft principles (generative) + pattern matching |
+| **Method** | Pattern matching (defensive) | Craft principles (generative) plus pattern matching |
 | **Voice** | Template profiles (casual/professional/blunt) | Calibrated to YOUR writing from a sample |
-| **Writing** | Fixes existing text only | Writes well from scratch AND fixes existing text |
+| **Writing** | Fixes existing text only | Writes from scratch AND fixes existing text |
 | **Depth** | Word swaps and structural flags | Why AI writing fails (RLHF mode collapse) and what to do instead |
 
-The competitors (blader/humanizer at 28k stars, conorbronsdon/avoid-ai-writing) are excellent at removing patterns. They don't teach craft. They produce clean text that reads like clean text. Not like a person with ten years of project experience wrote it.
+The competitors are good at what they do. blader/humanizer (28k stars) and conorbronsdon/avoid-ai-writing remove patterns cleanly. Neither teaches craft. They produce clean text that reads like clean text, not like a person with experience and opinions wrote it.
 
 ## Voice calibration
 
-The skill does not impose one voice. Provide a writing sample and it matches your patterns:
+The skill doesn't impose one voice. Give it a writing sample and it matches your patterns:
 
 ```
 Match my voice, here's a recent post: [paste 3-5 paragraphs]
 ```
 
-It analyzes sentence length, contraction rate, opening patterns, register, and recurring constructions. Then enforces craft principles within YOUR voice, not a generic template.
+It analyzes sentence length, contraction rate, opening patterns, register, and recurring constructions. Then it enforces craft principles inside YOUR voice instead of a generic template.
 
 See [`references/voice-calibration-guide.md`](references/voice-calibration-guide.md) for a full walkthrough on building a permanent voice profile.
 
@@ -114,7 +116,7 @@ writing-craft/
     └── your-style-overrides.md     # Company/publication style rules
 ```
 
-The skill loads reference files when relevant context is detected.
+The skill loads reference files when it detects relevant context.
 
 ## Contributing
 
@@ -131,6 +133,6 @@ MIT. Use it, fork it, sell courses around it, put it in your product.
 
 ## Credits
 
-Craft principles from: David Ogilvy, Joseph Sugarman, William Zinsser, Gary Halbert, Ernest Hemingway, David Deutsch.
+Craft principles from David Ogilvy, Joseph Sugarman, William Zinsser, Gary Halbert, Ernest Hemingway, and David Deutsch.
 
-AI anti-pattern research informed by: Wikipedia WikiProject AI Cleanup, Liang et al. (Stanford, 2023), and community work including [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) and [humanizer](https://github.com/blader/humanizer).
+AI anti-pattern research informed by Wikipedia WikiProject AI Cleanup, Liang et al. (Stanford, 2023), and community work including [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) and [humanizer](https://github.com/blader/humanizer).
