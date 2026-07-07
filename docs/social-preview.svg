@@ -1,0 +1,39 @@
+<svg viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="writing-craft-skill: teach AI agents to write well">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f9fc"/>
+      <stop offset="100%" stop-color="#eef1f8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+
+  <!-- Main title -->
+  <text x="640" y="220" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="64" fill="#1e293b" font-weight="800">writing-craft</text>
+
+  <!-- Subtitle -->
+  <text x="640" y="290" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#64748b">Teach AI agents to write well,</text>
+  <text x="640" y="330" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#64748b">not just avoid sounding like AI.</text>
+
+  <!-- Principle pills row -->
+  <rect x="280" y="380" width="110" height="40" rx="20" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <text x="335" y="405" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#2563eb" font-weight="600">Ogilvy</text>
+
+  <rect x="410" y="380" width="120" height="40" rx="20" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="470" y="405" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#16a34a" font-weight="600">Sugarman</text>
+
+  <rect x="550" y="380" width="100" height="40" rx="20" fill="#faf5ff" stroke="#e9d5ff" stroke-width="1.5"/>
+  <text x="600" y="405" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#7c3aed" font-weight="600">Zinsser</text>
+
+  <rect x="670" y="380" width="130" height="40" rx="20" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <text x="735" y="405" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#ea580c" font-weight="600">Hemingway</text>
+
+  <rect x="820" y="380" width="110" height="40" rx="20" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+  <text x="875" y="405" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#dc2626" font-weight="600">Deutsch</text>
+
+  <!-- Bottom: what it does -->
+  <text x="640" y="500" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#94a3b8">Classic copywriting craft + 24 AI anti-pattern categories</text>
+
+  <!-- Footer -->
+  <text x="640" y="580" text-anchor="middle" font-family="SF Mono, Menlo, monospace" font-size="16" fill="#cbd5e1">github.com/vidanov/writing-craft-skill</text>
+</svg>

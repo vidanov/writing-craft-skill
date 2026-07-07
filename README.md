@@ -1,4 +1,6 @@
-<h1 align="center">✍️ writing-craft-skill</h1>
+<p align="center">
+  <img src="docs/hero.svg" alt="writing-craft-skill: before and after comparison showing AI-pattern text transformed into concrete, specific writing" width="900"/>
+</p>
 
 <div align="center">
 
