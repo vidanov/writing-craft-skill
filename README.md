@@ -174,3 +174,12 @@ MIT. Use it, fork it, sell courses around it, put it in your product.
 Craft principles from David Ogilvy, Joseph Sugarman, William Zinsser, Gary Halbert, Ernest Hemingway, and David Deutsch.
 
 AI anti-pattern research informed by Wikipedia WikiProject AI Cleanup, Liang et al. (Stanford, 2023), and community work including [avoid-ai-writing](https://github.com/conorbronsdon/avoid-ai-writing) and [humanizer](https://github.com/blader/humanizer).
+
+---
+
+If this saved you an editing round, a star ⭐ helps the next person find it.
+
+## Also by the author
+
+- [aws-architecture-diagram-skill](https://github.com/vidanov/aws-architecture-diagram-skill) — Generate AWS architecture diagrams as draw.io files with 270+ verified icons
+- [shape](https://github.com/vidanov/shape) — Runtime governance for AI agents: phases, transactions, budget gates, proof traces
