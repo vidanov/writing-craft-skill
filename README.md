@@ -12,13 +12,11 @@
 
 ---
 
-The humanizer skills strip AI patterns. This skill adds craft.
-
-Short words. Concrete images. Sentence rhythm. Loss framing. The editing discipline that turns a first draft into writing that holds attention.
-
-Models are trained to produce text that's pleasant to skim and hard to disagree with. RLHF rewards smooth, safe, hedged prose. This skill teaches the opposite: writing specific enough to disagree with, concrete enough to be wrong about something, sharp enough that a reader who skims will miss the point.
+One file that teaches your AI agent how sentences work. Word choice, rhythm, loss framing, the slippery slide, and 24 patterns to catch when the output drifts back toward safe and smooth.
 
 I built this because I kept pasting the same editing instructions into every session. Fix the hedge words. Cut the throat-clearing. Make it concrete. One file that carries those rules everywhere was overdue.
+
+Models are trained to produce text that's pleasant to skim and hard to disagree with. RLHF rewards smooth, safe, hedged prose. This skill produces the opposite: writing that takes a position, names a specific failure, and rewards readers who pay attention.
 
 ## Quick start
 
@@ -72,15 +70,13 @@ Classic copywriting applied to technical writing:
 
 ## How it's different
 
-|  | Generic humanizers | This skill |
-|--|-------------------|------------|
+|  | Pattern removal tools | This skill |
+|--|----------------------|------------|
 | **Goal** | "Don't sound like AI" | "Sound like a practiced author" |
-| **Method** | Pattern matching (defensive) | Craft principles (generative) plus pattern matching |
+| **Method** | Defensive (flag and swap) | Generative (craft principles) plus defensive (flag and swap) |
 | **Voice** | Template profiles (casual/professional/blunt) | Calibrated to YOUR writing from a sample |
 | **Writing** | Fixes existing text only | Writes from scratch AND fixes existing text |
-| **Depth** | Word swaps and structural flags | Why AI writing fails (RLHF mode collapse) and what to do instead |
-
-The competitors are good at what they do. blader/humanizer (28k stars) and conorbronsdon/avoid-ai-writing remove patterns cleanly. Neither teaches craft. They produce clean text that reads like clean text, not like a person with experience and opinions wrote it.
+| **Depth** | Word lists and structural flags | Why the writing fails and what to do instead |
 
 ## Voice calibration
 
