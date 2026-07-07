@@ -18,7 +18,7 @@ Short words. Concrete images. Sentence rhythm. Loss framing. The editing discipl
 
 Models are trained to produce text that's pleasant to skim and hard to disagree with. RLHF rewards smooth, safe, hedged prose. This skill teaches the opposite: writing specific enough to disagree with, concrete enough to be wrong about something, sharp enough that a reader who skims will miss the point.
 
-I built this because the humanizer I was using cleaned my drafts until they read like every other cleaned draft. Nothing wrong, nothing alive.
+I built this because I kept pasting the same editing instructions into every session. Fix the hedge words. Cut the throat-clearing. Make it concrete. One file that carries those rules everywhere was overdue.
 
 ## Quick start
 
