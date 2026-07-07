@@ -40,7 +40,7 @@ jobs:
         run: |
           echo "Checking README for banned vocabulary..."
           BANNED="delve|tapestry|leveraging|holistic|synergy|game-changer|paradigm shift"
-          MATCHES=$(grep -iE "$BANNED" README.md | awk '!/vrm-ignore/ && $0 !~ /^[[:space:]]*>/' || true)
+          MATCHES=$(grep -iE "$BANNED" README.md | awk '$0 !~ /^[[:space:]]*>/ && !/vrm-ignore/' || true)
           if [ -n "$MATCHES" ]; then
             echo "$MATCHES"
             echo "❌ README contains banned vocabulary"
