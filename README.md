@@ -39,21 +39,44 @@ The skill flagged six tells in the first version (`in today's`, `landscape`, `le
 
 ## Quick start
 
-Copy one file. That's the install.
+### Skills CLI (works with Claude Code, Cursor, Codex, Kiro, and 50+ agents)
 
 ```bash
-# Claude Code / Kiro CLI (project-level, shared via git)
-mkdir -p .kiro/skills/writing-craft
-cp SKILL.md .kiro/skills/writing-craft/SKILL.md
+npx skills add vidanov/writing-craft-skill
 ```
 
+Install to a specific agent:
+
 ```bash
-# User-level (applies to all your projects)
+npx skills add vidanov/writing-craft-skill --agent claude-code
+npx skills add vidanov/writing-craft-skill --agent cursor
+npx skills add vidanov/writing-craft-skill --agent kiro-cli
+```
+
+Install globally (available in all projects):
+
+```bash
+npx skills add vidanov/writing-craft-skill --global
+```
+
+### Any AI assistant (ChatGPT, Claude Projects, internal agents)
+
+No CLI required. Works with any AI that supports custom instructions:
+
+1. Copy the prompt from [`chatgpt/PROMPT.md`](chatgpt/PROMPT.md) into your assistant's system prompt or custom instructions
+2. Start writing
+
+### Manual (single file copy)
+
+```bash
+# Project-level (shared via git)
+mkdir -p .kiro/skills/writing-craft
+cp SKILL.md .kiro/skills/writing-craft/SKILL.md
+
+# Or user-level (all projects)
 mkdir -p ~/.kiro/skills/writing-craft
 cp SKILL.md ~/.kiro/skills/writing-craft/SKILL.md
 ```
-
-Works with any agent that reads markdown instructions: Claude Code, Kiro CLI, Cursor, VS Code Copilot, OpenHands.
 
 ## What's inside
 
